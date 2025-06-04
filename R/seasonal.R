@@ -12,7 +12,7 @@
 #' @examples
 #' df %>% mutate(value_sadj = make_seasonal(value, period))
 make_seasonal <- function(val, period, imputed_values = FALSE) {
-  if (any(period != sort(period)) {
+  if (any(period != sort(period))) {
     message("This function returns seasonally adjusted values sorted by date, so if the table receiving them has unsorted dates, the seasonal values will not match original values.")
     stop("Input dates are not sorted!")
   }
